@@ -42,6 +42,7 @@ def _run_with_timeout(
 
 # --- less behaviour -------------------------------------------------------
 
+
 class TestLessNoHang:
     """Verify `less` does not hang when invoked in a non-interactive session."""
 
@@ -64,6 +65,7 @@ class TestLessNoHang:
 
 
 # --- git pager behaviour --------------------------------------------------
+
 
 class TestGitPagerNoHang:
     """Verify git commands that use a pager do not hang."""
@@ -92,6 +94,7 @@ class TestGitPagerNoHang:
 
 # --- environment defaults -------------------------------------------------
 
+
 class TestPagerEnvironmentDefaults:
     """Verify the pager-safe environment variables are present."""
 
@@ -116,6 +119,7 @@ class TestPagerEnvironmentDefaults:
 
 
 # --- subshell integration test -------------------------------------------
+
 
 class TestNewSessionNoHang:
     """Integration test: a fresh subprocess session should not hang on pagers."""
