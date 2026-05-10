@@ -1,6 +1,16 @@
 # Test OpenSymphony Project
 
-A minimal Python project used to validate the OpenSymphony workflow integration with Linear.
+An OpenSymphony-managed project template. A minimal Python project used to validate the OpenSymphony workflow integration with Linear.
+
+## Getting Started
+
+Clone the repository and configure your environment:
+
+```bash
+# Clone the project
+git clone https://github.com/stephenVertex/test-opensymphony-project.git
+cd test-opensymphony-project
+```
 
 ## Setup
 
@@ -21,3 +31,5 @@ print(greet("World"))
 ```bash
 python3 -m pytest tests/
 ```
+
+See [AGENTS.md](AGENTS.md) for project conventions and [WORKFLOW.md](WORKFLOW.md) for orchestration details.
