@@ -11,11 +11,11 @@ def main(
     hello_world: bool = typer.Option(
         False, "--hello-world", help="Print hello-world in English and Hebrew"
     ),
-    ascii_art: str = typer.Option(
-        "", "--ascii-art", help="Render TEXT as ASCII art"
-    ),
+    ascii_art: str = typer.Option("", "--ascii-art", help="Render TEXT as ASCII art"),
     font: str = typer.Option(
-        DEFAULT_FONT, "--font", help="Font for ASCII art (use --list-fonts to see options)"
+        DEFAULT_FONT,
+        "--font",
+        help="Font for ASCII art (use --list-fonts to see options)",
     ),
     list_fonts_flag: bool = typer.Option(
         False, "--list-fonts", help="List available ASCII art fonts"

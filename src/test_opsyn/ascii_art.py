@@ -7,7 +7,9 @@ AVAILABLE_FONTS = sorted(set(ASCII_FONTS) & set(FONT_NAMES))
 DEFAULT_FONT = "standard"
 
 
-def generate_ascii_art(text: str, font: str = DEFAULT_FONT, width: int | None = None) -> str:
+def generate_ascii_art(
+    text: str, font: str = DEFAULT_FONT, width: int | None = None
+) -> str:
     """Convert text to ASCII art.
 
     Args:
