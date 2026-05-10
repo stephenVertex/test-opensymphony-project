@@ -1,8 +1,10 @@
-# test-opensymphony-project
+# Test OpenSymphony Project
 
-A project managed with OpenSymphony.
+An OpenSymphony-managed project template. A minimal Python project used to validate the OpenSymphony workflow integration with Linear.
 
-## Usage
+## Getting Started
+
+Clone the repository and configure your environment:
 
 ```bash
 # Clone the repository
@@ -14,3 +16,25 @@ cd test-opensymphony-project
 # Start the control plane
 python3 -m opensymphony serve --config config.yaml
 ```
+
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+from src.hello import greet
+
+print(greet("World"))
+```
+
+## Testing
+
+```bash
+python3 -m pytest tests/
+```
+
+See [AGENTS.md](AGENTS.md) for project conventions and [WORKFLOW.md](WORKFLOW.md) for orchestration details.
