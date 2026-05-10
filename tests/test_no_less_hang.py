@@ -14,8 +14,6 @@ import os
 import subprocess
 import time
 
-import pytest
-
 
 def _base_env() -> dict[str, str]:
     """Return a copy of the current environment with pager-safe overrides."""
