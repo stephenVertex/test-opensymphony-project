@@ -7,9 +7,14 @@ An OpenSymphony-managed project template. A minimal Python project used to valid
 Clone the repository and configure your environment:
 
 ```bash
-# Clone the project
+# Clone the repository
 git clone https://github.com/stephenVertex/test-opensymphony-project.git
+
+# Navigate into the project directory
 cd test-opensymphony-project
+
+# Start the control plane
+python3 -m opensymphony serve --config config.yaml
 ```
 
 ## Setup
