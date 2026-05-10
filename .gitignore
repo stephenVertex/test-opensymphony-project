@@ -1,3 +1,5 @@
 .opensymphony*
 .env
 .envrc
+__pycache__/
+*.pyc
