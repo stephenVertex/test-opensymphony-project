@@ -1,7 +1,7 @@
 ---
 tracker:
   kind: linear
-  project_slug: "YOUR-PROJECT-SLUG"
+  project_slug: "test-opensymphony-project-68a2515d8dd7"
   # tracker.api_key is optional here; the loader falls back to LINEAR_API_KEY.
   active_states:
     - Todo
