@@ -3,3 +3,6 @@
 .envrc
 __pycache__/
 *.pyc
+*.egg-info/
+dist/
+.venv/
