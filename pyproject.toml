@@ -1,0 +1,18 @@
+[project]
+name = "test-opsyn"
+version = "0.1.0"
+description = "A hello-world CLI that prints greetings in English and Hebrew"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.9",
+]
+
+[project.scripts]
+test-opsyn = "test_opsyn.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/test_opsyn"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
