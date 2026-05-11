@@ -33,7 +33,9 @@ def calculate(
         "divide": divide,
     }
     if operation not in ops:
-        typer.echo(f"Unknown operation: {operation}. Choose from: add, subtract, multiply, divide")
+        typer.echo(
+            f"Unknown operation: {operation}. Choose from: add, subtract, multiply, divide"
+        )
         raise typer.Exit(code=1)
     try:
         result = ops[operation](a, b)
