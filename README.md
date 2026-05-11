@@ -1,6 +1,6 @@
 # Test OpenSymphony Project
 
-A hello-world CLI that prints greetings in English and Hebrew. A minimal Python project used to validate the OpenSymphony workflow integration with Linear.
+A hello-world CLI that prints greetings in English and Hebrew, plus a command-line calculator for basic arithmetic. A minimal Python project used to validate the OpenSymphony workflow integration with Linear.
 
 ## Prerequisites
 
@@ -57,6 +57,42 @@ test-opsyn --hello-world
 test-opsyn --help
 ```
 
+### Calculator
+
+```bash
+# Add two numbers
+test-opsyn calculate add 2 3
+# Output: 5
+
+# Subtract
+test-opsyn calculate subtract 10 4
+# Output: 6
+
+# Multiply
+test-opsyn calculate multiply 3 7
+# Output: 21
+
+# Divide
+test-opsyn calculate divide 10 2
+# Output: 5.0
+
+# Float operands are supported
+test-opsyn calculate add 1.5 2.5
+# Output: 4.0
+
+# Negative operands are supported (use -- to prevent -N being read as a flag)
+test-opsyn calculate add -- -3 7
+# Output: 4
+
+# Division by zero is caught
+test-opsyn calculate divide 5 0
+# Output (stderr): Cannot divide by zero
+
+# Unknown operation shows error
+test-opsyn calculate modulo 5 3
+# Output: Unknown operation: modulo. Choose from: add, subtract, multiply, divide
+```
+
 ### Python library
 
 ```python
@@ -81,8 +117,10 @@ python3 -m pytest tests/ -v
 ├── src/
 │   ├── hello.py              # Greeting library
 │   └── test_opsyn/
+│       ├── calculator.py     # Calculator logic (add, subtract, multiply, divide)
 │       └── cli.py            # CLI entry point (typer)
 ├── tests/
+│   ├── test_calculator.py    # Calculator unit and CLI integration tests
 │   └── test_hello.py         # Unit tests
 ├── pyproject.toml            # Project metadata and dependencies
 ├── requirements.txt          # Development dependencies

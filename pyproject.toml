@@ -1,7 +1,7 @@
 [project]
 name = "test-opsyn"
 version = "0.1.0"
-description = "A hello-world CLI that prints greetings in English and Hebrew"
+description = "A CLI with greetings and a command-line calculator for basic arithmetic"
 requires-python = ">=3.11"
 dependencies = [
     "typer>=0.9",
